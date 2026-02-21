@@ -5,10 +5,11 @@ document.getElementById("btn_login")
         const pinNumber = document.getElementById("pinNumber");
         const passNumber = pinNumber.value;
 
-        if(contactNumber === "01302497001" && passNumber === "1234"){
+        if(contactNumber === "01234567890" && passNumber === "1234"){
             alert("logIn successfully");
             window.location.assign("./home.html")
             mobileNumber.value = ""
+            pinNumber.value = ""
         }
         else{
             alert("login failed")
