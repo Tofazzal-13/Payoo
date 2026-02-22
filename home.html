@@ -55,15 +55,15 @@
         <p class="text-neutral/50">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
 
         <div class="buttons grid grid-cols-3 gap-3">
-            <button class="btn flex-col h-full py-[20px] btn-primary btn-soft">
+            <button onclick="showOnly('add_money')" class="btn flex-col h-full py-[20px] btn-primary btn-soft">
                 <img src="./assets/opt-1.png" alt="">
                 <p>Add Money</p>
             </button>
-            <button class="btn flex-col h-full py-[20px] btn-primary btn-soft">
+            <button onclick="showOnly('cashOut')" class="btn flex-col h-full py-[20px] btn-primary btn-soft">
                 <img src="./assets/opt-2.png" alt="">
                 <p>Cashout</p>
             </button>
-            <button class="btn flex-col h-full py-[20px] btn-primary btn-soft">
+            <button onclick="showOnly('send_money')" class="btn flex-col h-full py-[20px] btn-primary btn-soft">
                 <img src="./assets/opt-3.png" alt="">
                 <p>Send Money</p>
             </button>
@@ -71,7 +71,7 @@
                 <img src="./assets/opt-4.png" alt="">
                 <p>Get Bonus</p>
             </button>
-            <button class="btn flex-col h-full py-[20px] btn-primary btn-soft">
+            <button onclick="showOnly('paybill')" class="btn flex-col h-full py-[20px] btn-primary btn-soft">
                 <img src="./assets/opt-5.png" alt="">
                 <p>Pay Bill</p>
             </button>
@@ -82,8 +82,8 @@
         </div>
     </section>
 
-    <!-- addMoney part start here -->
-    <section id="add_money" class="w-11/12 mx-auto py-5">
+    <!-- addMoney part start here --> 
+    <section id="add_money" class="w-11/12 mx-auto py-5 hidden">
         <h2 class="text-2xl font-bold">Add Money</h2>
         <div class="form pt-10 ">
             <div class="card bg-base-100 w-full shadow-xl rounded-2xl">
@@ -91,7 +91,7 @@
                     <fieldset class="fieldset">
                         <label class="label text-neutral font-bold">Select A Bank</label>
                         <select id="add_money_bank" class="select w-full rounded-full">
-                            <option disabled selected>Select Bank</option>
+                            <option disabled selected>Select a Bank</option>
                             <option value="DBBL">DBBL</option>
                             <option value="Uttara Bank">Uttara Bank</option>
                             <option value="Islamic Bank">Islamic Bank</option>
@@ -117,7 +117,7 @@
         </div>
     </section>
     <!-- cashout part start here -->
-    <section id="cashOut" class="w-11/12 mx-auto py-5 hidden">
+    <section id="cashOut" class="w-11/12 mx-auto py-5">
         <h2 class="text-2xl font-bold">Cashout</h2>
         <div class="form pt-10 ">
             <div class="card bg-base-100 w-full shadow-xl rounded-2xl">
@@ -140,8 +140,27 @@
             </div>
         </div>
     </section>
+    <!-- sendMoney part start here -->
+    <section id="send_money" class="w-11/12 mx-auto py-5 hidden">
+        <h2 class="text-2xl font-bold">Send Money</h2>
+    </section>
+    <!-- sendMoney part end here -->
+    <!-- paybill part start here -->
+    <section id="paybill" class="w-11/12 mx-auto py-5 hidden">
+        <h2 class="text-2xl font-bold">Paybill</h2>
+    </section>
+    <!-- paybill part end here -->
+    <!-- history part start here -->
+    <section id="history" class="w-11/12 mx-auto py-5 spay-5">
+        <h2 class="text-2xl font-bold">Transaction</h2>
+        <div class="pt-5" id="history_container">
+            
+        </div>
+    </section>
+    <!-- history part end here -->
     <!-- js added  -->
     <script src="script/machine.js"></script>
+    <script src="script/addmoney.js"></script>
     <script src="script/cashout.js"></script>
 </body>
 
