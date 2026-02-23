@@ -25,7 +25,7 @@ document.getElementById("cashout_btn")
 
             const newHistory = document.createElement("div");
 
-            newHistory.innerHTML= `
+            newHistory.innerHTML = `
               <div class="transaction_card p-5 bg-base-100">
                 cashout ${cashoutAmount} successfully to ${cashoutNumber} at ${new Date()}
               </div>
@@ -38,7 +38,7 @@ document.getElementById("cashout_btn")
             alert("Invalid Pin");
             return;
         }
-        
+
 
     })
 
